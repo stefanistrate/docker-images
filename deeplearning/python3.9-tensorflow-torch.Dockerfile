@@ -50,7 +50,7 @@ RUN add-apt-repository ppa:git-core/ppa \
     && apt-get install -y --no-install-recommends \
     git
 
-# Set up essential deep learning packages.
+# Install essential deep learning packages.
 RUN python -m pip install --no-cache-dir --upgrade \
     albumentations \
     apache-beam \
