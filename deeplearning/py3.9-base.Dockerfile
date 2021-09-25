@@ -1,6 +1,4 @@
 FROM nvidia/cuda:11.4.1-cudnn8-runtime-ubuntu20.04
-ARG TENSORFLOW_MINOR_VERSION
-ARG TORCH_MINOR_VERSION
 
 # Change default shell.
 SHELL ["/bin/bash", "-c"]
@@ -59,9 +57,4 @@ RUN python -m pip install --no-cache-dir --upgrade \
     pandas \
     Pillow \
     python-snappy \
-    pytorch-lightning \
-    tensorflow==$TENSORFLOW_MINOR_VERSION.* \
-    tensorflow-addons \
-    tensorflow-hub \
-    torch==$TORCH_MINOR_VERSION.* \
     wandb
