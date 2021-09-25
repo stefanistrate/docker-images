@@ -1,2 +1,2 @@
-# docker-builds
-Custom Docker builds.
+# docker-images
+Custom Docker images.
