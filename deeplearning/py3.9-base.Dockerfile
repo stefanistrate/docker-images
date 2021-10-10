@@ -54,6 +54,7 @@ RUN python -m pip install --no-cache-dir --upgrade \
     apache-beam \
     matplotlib \
     numpy \
+    opencv-python \
     pandas \
     Pillow \
     python-snappy \
