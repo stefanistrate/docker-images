@@ -1,4 +1,3 @@
-
 FROM stefanistrate/deeplearning:py3.9-base
 ARG TENSORFLOW_MINOR_VERSION
 
