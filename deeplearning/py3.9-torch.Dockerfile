@@ -1,4 +1,3 @@
-
 FROM stefanistrate/deeplearning:py3.9-base
 ARG TORCH_MINOR_VERSION
 
