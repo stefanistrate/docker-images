@@ -42,6 +42,11 @@ RUN apt-get update \
     libcupti-dev
 ENV LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu:/usr/local/cuda/lib64:/usr/local/cuda/compat
 
+# Install OpenCV dependencies.
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    libgl1
+
 # Install Git.
 RUN add-apt-repository ppa:git-core/ppa \
     && apt-get update \
@@ -54,7 +59,7 @@ RUN python -m pip install --no-cache-dir --upgrade \
     apache-beam \
     matplotlib \
     numpy \
-    opencv-python \
+    opencv-python-headless \
     pandas \
     Pillow \
     python-snappy \
