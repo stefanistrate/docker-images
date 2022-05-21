@@ -1,6 +1,6 @@
-FROM nvidia/cuda:11.4.1-cudnn8-runtime-ubuntu20.04
+FROM nvidia/cuda:11.7.0-runtime-ubuntu20.04
 
-# Change default shell.
+# Change shell.
 SHELL ["/bin/bash", "-c"]
 
 # Install additional APT tools.
@@ -53,14 +53,16 @@ RUN add-apt-repository ppa:git-core/ppa \
     && apt-get install -y --no-install-recommends \
     git
 
-# Install essential deep learning packages.
+# Install frequently used packages for deep learning.
 RUN python -m pip install --no-cache-dir --upgrade \
+    absl-py \
     albumentations \
-    apache-beam \
+    catboost \
     matplotlib \
     numpy \
     opencv-python-headless \
     pandas \
     Pillow \
-    python-snappy \
+    scikit-learn \
+    tqdm \
     wandb
